@@ -3,7 +3,15 @@ pipeline {
   stages {
     stage('Build') {
       steps {
+        retry(count: 3) {
+          echo 'Trying to Build'
+        }
+
         echo 'Build Complete'
+        retry(count: 3) {
+          sh 'wwwwwwwww'
+        }
+
       }
     }
 
